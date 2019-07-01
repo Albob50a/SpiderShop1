@@ -226,6 +226,19 @@ client.channels.find('id', '595047963236106253').setName("WELCOM");
 client.channels.find('id', '595047963236106253').setName("WELCOME");
   }, 2500);
 });
+
+
+
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '595034134565355522').setName("S");
+client.channels.find('id', '595034134565355522').setName("Sp");
+client.channels.find('id', '595034134565355522').setName("Spi");
+client.channels.find('id', '595034134565355522').setName("Spid");
+client.channels.find('id', '595034134565355522').setName("Spide");
+client.channels.find('id', '595034134565355522').setName("Spider");
+  }, 2500);
+});
 	
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","friend"));
