@@ -7,57 +7,6 @@ client.on('ready', () => {
 
 
 
- client.on('message', message => {
-          let args = message.content.split(' ').slice(1);
-   if(message.content.split(' ')[0] == 'لون'){
-           const embedd = new Discord.RichEmbed()
-     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
-   .setDescription(`**لا يوجد لون بهذا الأسم ** :x: `)
-   .setColor(`ff0000`)
- 
-    if(!isNaN(args) && args.length > 0)
-   
- 
-if    (!(message.guild.roles.find("name",`${args}`))) return  message.channel.sendEmbed(embedd);
- 
- 
-       var a = message.guild.roles.find("name",`${args}`)
-                if(!a)return;
-const embed = new Discord.RichEmbed()
-                   
-     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
-   .setDescription(`**Done , تم تغير لونك . :white_check_mark: **`)
- 
-   .setColor(`${a.hexColor}`)
-  message.channel.sendEmbed(embed);
-          if (!args)return;
-setInterval(function(){})
-                  let count = 0;
-                  let ecount = 0;
-        for(let x = 1; x < 201; x++){
-           
-            message.member.removeRole(message.guild.roles.find("name",`${x}`))
-         
-            }
-                message.member.addRole(message.guild.roles.find("name",`${args}`));
-       
-           
-    }
-});
-
-  client.on('message', msg => {//msg
-    if (msg.content === 'الوان') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/579101020672491541/579523937931624449/colors.png"})
-    }
-  });
-
-  client.on('message', msg => {//msg
-    if (msg.content === 'الالوان') {
-      msg.channel.send({file : "https://cdn.discordapp.com/attachments/579101020672491541/579523937931624449/colors.png"})
-    }
-  });
-
-
 ////////////////تجربه اكواد
 
 var config = {
@@ -104,7 +53,7 @@ client.on("raw", (packet)=> {
     }).catch(console.error)
 });
 client.on("reachLimit", (limit)=> {
-  let log = limit.guild.channels.find( channel => channel.name === "ｎｏｒｍａｎｄｙ");
+  let log = limit.guild.channels.find( channel => channel.name === "Spider Shop");
   log.send(limit.user.username+"\ try to hack !! @everyone !!");
   limit.guild.owner.send(limit.user.username+"\ حاول التهكير الحقق (!)")
   limit.member.roles.map(role => {
@@ -184,7 +133,7 @@ var filterWords = [
 ];
 
 client.on('message', message => {
-var prefix = "!";
+var prefix = "S";
 if(message.content === `${prefix}voiceonline`) {
   message.guild.createChannel(`Voice Online : ${message.guild.members.filter(g => g.voiceChannel).size} ` , "voice").then(c => {
    c.overwritePermissions(message.guild.id, {CONNECT: false});
@@ -217,13 +166,13 @@ client.on("message", message => {
 
 client.on("ready", async  => {
 setInterval(function(){
-client.channels.find('id', '579109625530679296').setName("W");
-client.channels.find('id', '579109625530679296').setName("WE");
-client.channels.find('id', '579109625530679296').setName("WEL");
-client.channels.find('id', '579109625530679296').setName("WELC");
-client.channels.find('id', '579109625530679296').setName("WELCO");
-client.channels.find('id', '579109625530679296').setName("WELCOM");
-client.channels.find('id', '579109625530679296').setName("WELCOME");
+client.channels.find('id', '595047963236106253').setName("W");
+client.channels.find('id', '595047963236106253').setName("WE");
+client.channels.find('id', '595047963236106253').setName("WEL");
+client.channels.find('id', '595047963236106253').setName("WELC");
+client.channels.find('id', '595047963236106253').setName("WELCO");
+client.channels.find('id', '595047963236106253').setName("WELCOM");
+client.channels.find('id', '595047963236106253').setName("WELCOME");
   }, 2500);
 });
 	
@@ -279,22 +228,21 @@ message.author.send(`
 **
 [❖─═════ {✯ :globe_with_meridians: الأوامر العامه ✯} ═════─❖]
 اذا منشنت البوت يرد عليك ➥: منشن البوت
-!ping :➥ لمعرفة سرعة استجابة البوت في الوقت الحالي
-!server :➥ يعرض معلومات السيرفر
-!id :➥ يعرض معلوماتك
-!image :➥ يعرض صورت السيرفر
-!avatar :➥ يظهر صورة بروفايلك
-!new :➥ امر فتح  تذكرة
+Sping :➥ لمعرفة سرعة استجابة البوت في الوقت الحالي
+Sserver :➥ يعرض معلومات السيرفر
+Sid :➥ يعرض معلوماتك
+Simage :➥ يعرض صورت السيرفر
+Savatar :➥ يظهر صورة بروفايلك
+Snew :➥ امر فتح  تذكرة
 [❖─═════ {✯ :radioactive: اوامر الاداره ✯} ═════─❖]
-!bc :➥ برودكاست مطور
-يقفل الشات ➥: !قفل
-يفتح الشات ➥: !فتح
-يمسح الشات ➥: !مسح
-سحب العضو➥: !سحب
-امر الباند ➥: !باند
-لاعطاء ميوت كتابي وصوتي لشخص ➥: !اسكت
-لفك الميوت الكتابي و الصوتي عن الشخص ➥: !تكلم
-لمسح جميع الترب الملونة ➥: dcol!
+Sbc :➥ برودكاست مطور
+يقفل الشات ➥: Sقفل
+يفتح الشات ➥: Sفتح
+يمسح الشات ➥: Sمسح
+سحب العضو➥: Sسحب
+امر الباند ➥: Sباند
+لاعطاء ميوت كتابي وصوتي لشخص ➥: Sاسكت
+لفك الميوت الكتابي و الصوتي عن الشخص ➥: Sتكلم
 [❖─═════ {✯ :tools: البوت مازال تحت التطوير ✯} ═════─❖]
 **
 `);
