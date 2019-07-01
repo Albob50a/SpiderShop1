@@ -236,13 +236,13 @@ Savatar :➥ يظهر صورة بروفايلك
 Snew :➥ امر فتح  تذكرة
 [❖─═════ {✯ :radioactive: اوامر الاداره ✯} ═════─❖]
 Sbc :➥ برودكاست مطور
-يقفل الشات ➥: Sقفل
-يفتح الشات ➥: Sفتح
-يمسح الشات ➥: Sمسح
-سحب العضو➥: Sسحب
-امر الباند ➥: Sباند
-لاعطاء ميوت كتابي وصوتي لشخص ➥: Sاسكت
-لفك الميوت الكتابي و الصوتي عن الشخص ➥: Sتكلم
+يقفل الشات ➥: Sopen
+يفتح الشات ➥: Sclose
+يمسح الشات ➥: Scelar
+سحب العضو➥: Smove
+امر الباند ➥: Sban
+لاعطاء ميوت كتابي وصوتي لشخص ➥: Smute
+لفك الميوت الكتابي و الصوتي عن الشخص ➥: Sunmute
 [❖─═════ {✯ :tools: البوت مازال تحت التطوير ✯} ═════─❖]
 **
 `);
@@ -301,7 +301,7 @@ client.on('ready', function(){
 
 
 client.on('message', message => {
-            if (message.content.startsWith("!help")) {
+            if (message.content.startsWith("Shelp")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField('     Help ' ,' **تم ارسال الاوامر الي الخاص ✉**')
@@ -481,7 +481,7 @@ client.on('message' , message => {
 client.on("message", message => {
 var prefix = "S" // البريفكس
     var args = message.content.substring(prefix.length).split(" ");
-    if (message.content.startsWith(prefix + "مسح")) { // الامر
+    if (message.content.startsWith(prefix + "caler")) { // الامر
         if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠  لا يوجد لديك صلاحية لمسح الشات**');
 var msg;
@@ -505,7 +505,7 @@ footer: {
 
 client.on('message', message => {
 
-    if (message.content === "Sقفل") {
+    if (message.content === "Sclose") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -516,7 +516,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات ✅ ")
            });
              }
-if (message.content === "Sفتح") {
+if (message.content === "Sopen") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -581,7 +581,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "Sاسكت") {
+    if (command === "Smute") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'log');
@@ -617,7 +617,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "Sتكلم") {
+    if (command === "Sunmute") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'log');
