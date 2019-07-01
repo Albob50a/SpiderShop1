@@ -220,7 +220,7 @@ message.react("❌")
  /////////////////////////////////////////////وامر عامه
 
 client.on('message' , message => {
-if(message.content === '!help') {
+if(message.content === 'Shelp') {
   var EsTeKnAN = new Discord.RichEmbed()
   .setColor('RANDOM')
 message.author.send(`
@@ -313,7 +313,7 @@ client.on('message', message => {
 
 
 client.on('message', function(msg) {
-    const prefix = '!'
+    const prefix = 'S'
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
@@ -336,7 +336,7 @@ client.on('message', function(msg) {
 
 
 client.on("message", message => {
-    const prefix = "!"
+    const prefix = "S"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -381,7 +381,7 @@ client.on('message', message => {
 
 
 client.on("message", msg => {
-  if(msg.content === '!' + "id") {
+  if(msg.content === 'S' + "id") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -479,7 +479,7 @@ client.on('message' , message => {
 
 
 client.on("message", message => {
-var prefix = "!" // البريفكس
+var prefix = "S" // البريفكس
     var args = message.content.substring(prefix.length).split(" ");
     if (message.content.startsWith(prefix + "مسح")) { // الامر
         if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
@@ -505,7 +505,7 @@ footer: {
 
 client.on('message', message => {
 
-    if (message.content === "!قفل") {
+    if (message.content === "Sقفل") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -516,7 +516,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات ✅ ")
            });
              }
-if (message.content === "!فتح") {
+if (message.content === "Sفتح") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -537,7 +537,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
 
 client.on('message', message => {
-    var prefix = "!";
+    var prefix = "S";
           if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -581,7 +581,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "!اسكت") {
+    if (command === "Sاسكت") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'log');
@@ -617,7 +617,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "!تكلم") {
+    if (command === "Sتكلم") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'log');
