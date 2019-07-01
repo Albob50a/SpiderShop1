@@ -1,1 +1,2 @@
-# SpiderShop1
+# Kings-Shop-System
+Kings Shop System
