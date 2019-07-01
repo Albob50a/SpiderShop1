@@ -770,9 +770,9 @@ msg.reply('**وقتما تعود ستجدنا في انتظارك اعتني ب�
 
 
 client.on("guildMemberAdd", member => { 
-        if(member.guild.id === "579089974838689812") { 
+        if(member.guild.id === "401044429646987275") { 
 setTimeout(function(){ 
-  const channel = member.guild.channels.find('id', '579089974838689812');  
+  const channel = member.guild.channels.find('id', '401044429646987275');  
 if (!channel) return; 
   channel.send(`**Welcome To [__NORMANDY__]:shopping_cart:** ❤️ , ${member}`) 
 }, 5000);  
@@ -800,7 +800,7 @@ client.on('guildMemberAdd', member => {
     invites[member.guild.id] = guildInvites;
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const logChannel = member.guild.channels.find(channel => channel.name === "normandy");
+    const logChannel = member.guild.channels.find(channel => channel.name === "BODY");
     logChannel.send(`${member} **Invited by:** <@${inviter.id}>`);
   });
 });
