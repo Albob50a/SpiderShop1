@@ -166,23 +166,21 @@ client.on("message", message => {
 
 client.on("ready", async  => {
 setInterval(function(){
-client.channels.find('id', '579109625530679296').setName("┏");
-client.channels.find('id', '579109625530679296').setName("┏●");
-client.channels.find('id', '579109625530679296').setName("┏●i");
-client.channels.find('id', '579109625530679296').setName("┏●in");
-client.channels.find('id', '579109625530679296').setName("┏●in-");
-client.channels.find('id', '579109625530679296').setName("┏●in-f");
-client.channels.find('id', '579109625530679296').setName("┏●in-fo");
-client.channels.find('id', '579109625530679296').setName("┏●in-fo●");
-client.channels.find('id', '579109625530679296').setName("┏●in-fo●┓");
-  }, 3000);
+client.channels.find('id', '595047963236106253').setName("W");
+client.channels.find('id', '595047963236106253').setName("WE");
+client.channels.find('id', '595047963236106253').setName("WEL");
+client.channels.find('id', '595047963236106253').setName("WELC");
+client.channels.find('id', '595047963236106253').setName("WELCO");
+client.channels.find('id', '595047963236106253').setName("WELCOM");
+client.channels.find('id', '595047963236106253').setName("WELCOME");
+  }, 2500);
 });
 	
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","friend"));
     });
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","NORMANDY"));
+    member.addRole(member.guild.roles.find("name","Spider Shop"));
     });
 
 client.on('message', message => {
@@ -276,7 +274,7 @@ if(ra3d.content.startsWith(prefix + 'ccolors')) {
 
 client.on('ready', function(){
     var ms = 40000 ;
-    var setGame = [`${client.guilds.size} Server`,' NORMANDY ',`${client.users.size} Members`,'By:DrTriCk'];
+    var setGame = [`${client.guilds.size} Server`,' NORMANDY ',`${client.users.size} Members`,'By:Body'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -718,18 +716,13 @@ msg.reply('**وقتما تعود ستجدنا في انتظارك اعتني ب�
               }, 00)
 });
 
-client.on('message', msg => {
-  if(msg.content === 'اشرس')
-              setTimeout(function() {  
-msg.reply('**بس يلا**')
-              }, 00)
-});
+
 
 
 client.on("guildMemberAdd", member => { 
-        if(member.guild.id === "579089974838689812") { 
+        if(member.guild.id === "595034134565355522") { 
 setTimeout(function(){ 
-  const channel = member.guild.channels.find('id', '579089974838689812');  
+  const channel = member.guild.channels.find('id', '595034134565355522');  
 if (!channel) return; 
   channel.send(`**Welcome To [__NORMANDY__]:shopping_cart:** ❤️ , ${member}`) 
 }, 5000);  
@@ -757,7 +750,7 @@ client.on('guildMemberAdd', member => {
     invites[member.guild.id] = guildInvites;
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const logChannel = member.guild.channels.find(channel => channel.name === "normandy");
+    const logChannel = member.guild.channels.find(channel => channel.name === "Spider Shop");
     logChannel.send(`${member} **Invited by:** <@${inviter.id}>`);
   });
 });
