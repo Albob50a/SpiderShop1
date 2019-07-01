@@ -184,7 +184,7 @@ client.on('guildMemberAdd', member=> {
     });
 
 client.on('message', message => {
-	var prefix = "!";
+	var prefix = "S";
 if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'سحب')) {
  if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -220,7 +220,7 @@ message.react("❌")
  /////////////////////////////////////////////وامر عامه
 
 client.on('message' , message => {
-if(message.content === '!help') {
+if(message.content === 'Shelp') {
   var EsTeKnAN = new Discord.RichEmbed()
   .setColor('RANDOM')
 message.author.send(`
@@ -228,22 +228,21 @@ message.author.send(`
 **
 [❖─═════ {✯ :globe_with_meridians: الأوامر العامه ✯} ═════─❖]
 اذا منشنت البوت يرد عليك ➥: منشن البوت
-!ping :➥ لمعرفة سرعة استجابة البوت في الوقت الحالي
-!server :➥ يعرض معلومات السيرفر
-!id :➥ يعرض معلوماتك
-!image :➥ يعرض صورت السيرفر
-!avatar :➥ يظهر صورة بروفايلك
-!new :➥ امر فتح  تذكرة
+Sping :➥ لمعرفة سرعة استجابة البوت في الوقت الحالي
+Sserver :➥ يعرض معلومات السيرفر
+Sid :➥ يعرض معلوماتك
+Simage :➥ يعرض صورت السيرفر
+Savatar :➥ يظهر صورة بروفايلك
+Snew :➥ امر فتح  تذكرة
 [❖─═════ {✯ :radioactive: اوامر الاداره ✯} ═════─❖]
-!bc :➥ برودكاست مطور
-يقفل الشات ➥: !قفل
-يفتح الشات ➥: !فتح
-يمسح الشات ➥: !مسح
-سحب العضو➥: !سحب
-امر الباند ➥: !باند
-لاعطاء ميوت كتابي وصوتي لشخص ➥: !اسكت
-لفك الميوت الكتابي و الصوتي عن الشخص ➥: !تكلم
-لمسح جميع الترب الملونة ➥: dcol!
+Sbc :➥ برودكاست مطور
+يقفل الشات ➥: Sقفل
+يفتح الشات ➥: Sفتح
+يمسح الشات ➥: Sمسح
+سحب العضو➥: Sسحب
+امر الباند ➥: Sباند
+لاعطاء ميوت كتابي وصوتي لشخص ➥: Sاسكت
+لفك الميوت الكتابي و الصوتي عن الشخص ➥: Sتكلم
 [❖─═════ {✯ :tools: البوت مازال تحت التطوير ✯} ═════─❖]
 **
 `);
