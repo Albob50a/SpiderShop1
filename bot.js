@@ -217,23 +217,21 @@ client.on("message", message => {
 
 client.on("ready", async  => {
 setInterval(function(){
-client.channels.find('id', '579109625530679296').setName("┏");
-client.channels.find('id', '579109625530679296').setName("┏●");
-client.channels.find('id', '579109625530679296').setName("┏●i");
-client.channels.find('id', '579109625530679296').setName("┏●in");
-client.channels.find('id', '579109625530679296').setName("┏●in-");
-client.channels.find('id', '579109625530679296').setName("┏●in-f");
-client.channels.find('id', '579109625530679296').setName("┏●in-fo");
-client.channels.find('id', '579109625530679296').setName("┏●in-fo●");
-client.channels.find('id', '579109625530679296').setName("┏●in-fo●┓");
-  }, 3000);
+client.channels.find('id', '579109625530679296').setName("W");
+client.channels.find('id', '579109625530679296').setName("WE");
+client.channels.find('id', '579109625530679296').setName("WEL");
+client.channels.find('id', '579109625530679296').setName("WELC");
+client.channels.find('id', '579109625530679296').setName("WELCO");
+client.channels.find('id', '579109625530679296').setName("WELCOM");
+client.channels.find('id', '579109625530679296').setName("WELCOME");
+  }, 2500);
 });
 	
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","friend"));
     });
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","NORMANDY"));
+    member.addRole(member.guild.roles.find("name","Spider Shop"));
     });
 
 client.on('message', message => {
@@ -327,7 +325,7 @@ if(ra3d.content.startsWith(prefix + 'ccolors')) {
 
 client.on('ready', function(){
     var ms = 40000 ;
-    var setGame = [`${client.guilds.size} Server`,' NORMANDY ',`${client.users.size} Members`,'By:DrTriCk'];
+    var setGame = [`${client.guilds.size} Server`,' NORMANDY ',`${client.users.size} Members`,'By:BODY'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -769,12 +767,6 @@ msg.reply('**وقتما تعود ستجدنا في انتظارك اعتني ب�
               }, 00)
 });
 
-client.on('message', msg => {
-  if(msg.content === 'اشرس')
-              setTimeout(function() {  
-msg.reply('**بس يلا**')
-              }, 00)
-});
 
 
 client.on("guildMemberAdd", member => { 
