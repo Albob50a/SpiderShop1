@@ -818,7 +818,7 @@ client.on('guildMemberAdd', member => {
 
 client.on('message',function(message) {
   if(!message.channel.guild) return undefined;
-  const swearWords = ["كل زق","كل خرا","كسمك","كلب","متناك"];
+  const swearWords = ["كل زق","كل خرا","كسمك","كلب","متناك","خول","احا","عرص","معرص"];
   if (swearWords.some(word => message.content.includes(word)) ) {
     message.delete()
     message.reply("ممنوع السب"); 
