@@ -5,7 +5,7 @@ x5bzteam.on("ready", () => {
     onstart();
 });
 x5bz = "537966671810527235";
-nick = "!.💛DrTriCK💛.👑";
+nick = "!.💛BODY💛.👑";
 
 function onstart(){
     var v1 = nick.split('');
